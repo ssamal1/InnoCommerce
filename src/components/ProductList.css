@@ -1,0 +1,263 @@
+/* Styling for product container */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+  
+/* Styling for individual product items */
+.product-item {
+    flex: 0 0 calc(33.33% - 20px); 
+    margin: 10px;
+    position: relative;
+    width: 300px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    box-sizing: border-box;
+}
+  
+/* Styling for product content */
+.product-content {
+    width: 100%; 
+    height: 600px; 
+}
+  
+/* Styling for product images */
+.product-image {
+    width: 100%; 
+    height: 60%; 
+    object-fit: cover; 
+}
+  
+/* Styling for product description */
+.product-description {
+    padding: 10px;
+    text-align: left;
+}
+  
+/* Styling for image navigation */
+.image-navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+  
+/* Styling for arrow buttons */
+.arrow-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease; 
+}
+  
+/* Styling for arrow buttons on hover */
+.arrow-button:hover {
+    transform: scale(2.5); 
+}
+  
+/* Styling for arrow button images */
+.arrow-button img {
+    width: 20px; 
+    height: 20px; 
+}
+
+/* Styling for search bar */
+.search-bar {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+  
+/* Styling for search bar placeholder */
+.search-bar::placeholder {
+    color: #aaa;
+}
+  
+/* Styling for focused search bar */
+.search-bar:focus {
+    border-color: #000000; 
+}
+  
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Change the font family to Arial, a sans-serif font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for product list container */
+.product-list-container {
+    position: relative;
+}
+
+/* Styling for header */
+.header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: #21a3fa; 
+    padding: 20px 20px; 
+    margin: 0;
+}
+  
+/* Styling for cart button */
+.cart-button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff; 
+    cursor: pointer;
+}
+  
+/* Styling for cart container */
+.cart-container {
+    position: absolute;
+    top: 0;
+    right: -300px; 
+    width: 200px; 
+    height: 100%;
+    background-color: #f8f9fa; 
+    border-left: 2px solid #535151; 
+    transition: right 0.3s ease; 
+    z-index: 1; 
+    overflow-y: auto; 
+}
+  
+/* Styling for open cart container */
+.cart-container.open {
+    right: 0; 
+    overflow-y: auto; 
+}
+
+/* Styling for cart content */
+.cart-content {
+    padding: 7px;
+    overflow-y: auto; 
+}
+  
+/* Styling for individual product items in the cart */
+.cart-container .product-item {
+    height: 250px;
+}
+  
+/* Adjust height of product images in the cart */
+.cart-container .product-image {
+    height: 10%;
+}
+
+/* Styling for cart header */
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+  
+/* Styling for close button in cart */
+.close-button {
+    background-color: transparent;
+    border: none;
+    color: #00538c;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Styling for title */
+.title {
+    color: #000000; 
+    margin-right: 20px; 
+}
+  
+/* Styling for search bar */
+.search-bar {
+    flex-grow: 1; 
+    width: calc(100% - 200px); 
+    max-width: 850px; 
+    margin-left: 20px; 
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    background-color: #ffffff; 
+    color: #333333; 
+}
+  
+/* Styling for search bar placeholder */
+.search-bar::placeholder {
+    color: #aaa;
+}
+  
+/* Styling for focused search bar */
+.search-bar:focus {
+    border-color: #000000; 
+}
+
+/* Styling for product description paragraphs */
+.product-description p {
+    font-family: Arial, sans-serif; 
+}
+
+/* Styling to disable scroll */
+.disable-scroll {
+    overflow: hidden;
+}
+
+/* Styling for discount container */
+.product-description .discount-container {
+    display: inline-block; 
+    background-color: rgb(163, 3, 3); 
+    color: white; 
+    padding: 2px 5px;
+    border-radius: 5px; 
+}
+
+/* Additional styling for other paragraphs if needed */
+.product-description p {
+    font-family: Arial, sans-serif; 
+}
+
+/* Additional styling for the brand paragraph if needed */
+.product-description p:first-child {
+    font-weight: bold; 
+    font-size: 1.1em;
+}
+
+/* Additional styling for the description paragraph if needed */
+.product-description p:nth-child(3) {
+    color: #666; 
+    font-size: 0.9em; 
+}
+
+/* Styling for added to cart notification */
+.added-to-cart {
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: black; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    z-index: 999; 
+    opacity: 0; 
+    transition: opacity 1s ease; 
+}
+
+/* Styling to make added to cart notification visible */
+.added-to-cart.show {
+    opacity: 1; 
+}
+
+/* Styling for body */
+body {
+    overflow-x: hidden; 
+}
